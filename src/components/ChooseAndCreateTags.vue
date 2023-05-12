@@ -47,10 +47,17 @@ export default {
 
         handleInputConfirm() {
             let inputValue = this.newTag;
-            if (inputValue && this.dynamicTags.indexOf(inputValue) === -1) {
+            if (inputValue) {
+                if (this.dynamicTags.indexOf(inputValue) !== -1) {
+                    this.handleDuplicateTag(inputValue);
+                }
                 this.dynamicTags.push(inputValue);
             }
             this.newTag = '';
+        },
+
+        handleDuplicateTag(tag) {
+            this.handleClose(tag);
         }
     }
 }
