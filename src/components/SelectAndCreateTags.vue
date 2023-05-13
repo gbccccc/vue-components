@@ -31,7 +31,7 @@
 
 <script>
 export default {
-    name: 'ChooseAndCreateTags',
+    name: 'SelectAndCreateTags',
     props: ["defaultOptions", "optionDescription"],
     data() {
         return {

@@ -1,19 +1,19 @@
 <template>
     <div id="app">
         <!--        <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-        <ChooseAndCreateTags :default-options="defaultOptions" :option-description="optionDescription"/>
+        <SelectAndCreateTags :default-options="defaultOptions" :option-description="optionDescription"/>
     </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import ChooseAndCreateTags from "@/components/ChooseAndCreateTags.vue";
+import SelectAndCreateTags from "@/components/SelectAndCreateTags.vue";
 
 export default {
     name: 'App',
     components: {
+        SelectAndCreateTags,
         HelloWorld,
-        ChooseAndCreateTags
     },
 
     data() {
