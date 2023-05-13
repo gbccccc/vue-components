@@ -32,7 +32,18 @@
 <script>
 export default {
     name: 'SelectAndCreateTags',
+    /**
+     * defaultOptions: array of {value, label}
+     * e.g. [
+     *     {value: "option1", label:"option1"},
+     *     {value: "option2", label:"option2"},
+     *     {value: "option3", label:"option3"},
+     * ]
+     *
+     * optionDescription: string
+     */
     props: ["defaultOptions", "optionDescription"],
+
     data() {
         return {
             dynamicTags: [],
