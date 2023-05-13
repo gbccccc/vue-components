@@ -1,6 +1,7 @@
 <template>
     <div id="app">
         <!--        <HelloWorld msg="Welcome to Your Vue.js App"/>-->
+        <MultipleCreateAndSelect :default-options="defaultOptions" :option-description="optionDescription"/>
         <SelectAndCreateTags :default-options="defaultOptions" :option-description="optionDescription"/>
     </div>
 </template>
@@ -8,12 +9,14 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import SelectAndCreateTags from "@/components/SelectAndCreateTags.vue";
+import MultipleCreateAndSelect from "@/components/MultipleCreateAndSelect.vue";
 
 export default {
     name: 'App',
     components: {
         SelectAndCreateTags,
         HelloWorld,
+        MultipleCreateAndSelect
     },
 
     data() {
