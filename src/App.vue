@@ -1,7 +1,8 @@
 <template>
     <div id="app">
         <!--        <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-        <MultipleCreateAndSelect :default-options="defaultOptions" :option-description="optionDescription"/>
+        <MultipleCreateAndSelect :default-options="defaultOptions" :option-description="optionDescription"
+                                 create-description="other option"/>
         <SelectAndCreateTags :default-options="defaultOptions" :option-description="optionDescription"/>
     </div>
 </template>
@@ -22,9 +23,9 @@ export default {
     data() {
         return {
             defaultOptions: [
-                {value: "option1", label:"option1"},
-                {value: "option2", label:"option2"},
-                {value: "option3", label:"option3"},
+                {value: "option1", label: "option1"},
+                {value: "option2", label: "option2"},
+                {value: "option3", label: "option3"},
             ],
             optionDescription: "add an option"
         }
