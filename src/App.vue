@@ -1,9 +1,10 @@
 <template>
     <div id="app">
         <!--        <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-        <MultipleCreateAndSelect :default-options="defaultOptions" :option-description="optionDescription"
-                                 create-description="other option"/>
-        <SelectAndCreateTags :default-options="defaultOptions" :option-description="optionDescription"/>
+<!--        <MultipleCreateAndSelect v-model="options" :default-options="defaultOptions" :option-description="optionDescription"-->
+<!--                                 create-description="other option"/>-->
+        <SelectAndCreateTags v-model="options" :default-options="defaultOptions" :option-description="optionDescription"/>
+        {{ options }}
     </div>
 </template>
 
@@ -27,7 +28,8 @@ export default {
                 {value: "option2", label: "option2"},
                 {value: "option3", label: "option3"},
             ],
-            optionDescription: "add an option"
+            optionDescription: "add an option",
+            options: []
         }
     }
 }
