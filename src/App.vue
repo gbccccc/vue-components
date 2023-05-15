@@ -1,9 +1,9 @@
 <template>
     <div id="app">
         <!--        <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-<!--        <MultipleCreateAndSelect v-model="options" :default-options="defaultOptions" :option-description="optionDescription"-->
-<!--                                 create-description="other option"/>-->
-        <SelectAndCreateTags v-model="options" :default-options="defaultOptions" :option-description="optionDescription"/>
+        <MultipleCreateAndSelect v-model="options" :default-options="defaultOptions" :option-description="optionDescription"
+                                 create-description="other option"/>
+<!--        <SelectAndCreateTags v-model="options" :default-options="defaultOptions" :option-description="optionDescription"/>-->
         {{ options }}
     </div>
 </template>
