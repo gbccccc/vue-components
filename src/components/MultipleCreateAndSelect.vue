@@ -52,11 +52,11 @@ export default {
         prop: 'options',
         event: 'change'
     },
-    props: ["defaultOptions", "optionDescription", "createDescription"],
+    props: ["options", "defaultOptions", "optionDescription", "createDescription"],
 
     data() {
         return {
-            selectedOptions: [],
+            selectedOptions: this.options,
             createdOptions: [],
             newOption: '',
         }
