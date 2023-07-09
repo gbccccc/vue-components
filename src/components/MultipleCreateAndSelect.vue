@@ -8,8 +8,7 @@
             multiple
             collapse-tags
             default-first-option
-            :placeholder="optionDescription"
-        >
+            :placeholder="optionDescription">
             <li>
                 <el-input v-model="newOption" class="el-add-input" :placeholder="createDescription">
                     <template #suffix>
@@ -21,14 +20,12 @@
                 v-for="item in defaultOptions"
                 :key="item.value"
                 :label="item.label"
-                :value="item.value"
-            />
+                :value="item.value"></el-option>
             <el-option
                 v-for="item in createdOptions"
                 :key="item.value"
                 :label="item.label"
-                :value="item.value"
-            />
+                :value="item.value"></el-option>
         </el-select>
     </div>
 </template>

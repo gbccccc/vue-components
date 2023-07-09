@@ -3,29 +3,27 @@
         <el-tag
             :key="tag"
             v-for="tag in dynamicTags"
-            closable
+            :closable="!disabled"
             :disable-transitions="false"
-            @close="handleClose(tag)"
-        >
+            @close="handleClose(tag)">
             {{ tag.length > 50 ? tag.substring(0, 49) + '...' : tag }}
         </el-tag>
         <el-select
             class="select-option"
             v-model="newTag"
+            v-if="!disabled"
             ref="tagSelect"
             filterable
             allow-create
             default-first-option
             :placeholder="optionDescription"
             @change="handleInputConfirm"
-            @blur="onBlur"
-        >
+            @blur="onBlur">
             <el-option
                 v-for="item in defaultOptions"
                 :key="item.value"
                 :label="item.label"
-                :value="item.value"
-            />
+                :value="item.value"></el-option>
         </el-select>
     </div>
 </template>
@@ -48,7 +46,7 @@ export default {
         prop: 'options',
         event: 'change'
     },
-    props: ["options", "defaultOptions", "optionDescription"],
+    props: ["options", "defaultOptions", "optionDescription", "disabled"],
 
     data() {
         return {
